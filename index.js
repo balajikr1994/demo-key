@@ -15,4 +15,4 @@ app.get('/key-auth', (req, res) => {
   return res.status(200).send(fileRead);
 });
 
-app.listen(3000, () => console.log('Express listening on', 3000));
+app.listen(process.env.PORT, () => console.log('Express listening on', process.env.PORT));
