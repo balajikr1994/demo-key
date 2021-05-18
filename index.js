@@ -12,7 +12,6 @@ app.get('/', (req, res) => {
 });
 
 app.get('/key-auth', (req, res) => {
-    res.set('Content-Type', 'binary/octet-stream');
   const fileDIR = path.resolve(`${__dirname}/gudsho.key`);
   const fileRead = fs.readFileSync(fileDIR);
   return res.status(200).send(fileRead);
